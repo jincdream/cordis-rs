@@ -1,0 +1,24 @@
+[package]
+name = "cordis-rs-loader"
+description = "Hierarchical plugin configuration loader for Cordis"
+documentation = "https://docs.rs/cordis-rs-loader"
+readme = "../../README.md"
+repository.workspace = true
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[lib]
+name = "cordis_loader"
+
+[dependencies]
+async-trait.workspace = true
+cordis-core = { package = "cordis-rs-core", version = "0.1.0", path = "../cordis-core" }
+parking_lot.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+tokio.workspace = true
+
+[dev-dependencies]
+tokio.workspace = true

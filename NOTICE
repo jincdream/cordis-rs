@@ -1,0 +1,13 @@
+Cordis for Rust is an independent Rust port of cordiverse/cordis.
+
+The compatibility reference is:
+https://github.com/cordiverse/cordis
+commit 8cc9e33fab69e2d0476d126baaf2acb24e6a6ab4
+
+The upstream project is distributed under the MIT License. Its copyright and
+license notices remain available in the upstream repository. No affiliation or
+endorsement by the upstream maintainers is implied.
+
+Portions are derived from cordiverse/cordis:
+Copyright (c) 2021-present Shigma
+Licensed under the MIT License; the full license text is reproduced in LICENSE.

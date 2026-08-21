@@ -1,0 +1,16 @@
+[package]
+name = "cordis-rs-group"
+description = "Group marker plugin for cordis-rs-loader"
+documentation = "https://docs.rs/cordis-rs-group"
+readme = "../../README.md"
+repository.workspace = true
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[lib]
+name = "cordis_group"
+
+[dependencies]
+cordis-core = { package = "cordis-rs-core", version = "0.1.0", path = "../cordis-core" }

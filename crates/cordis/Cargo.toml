@@ -1,0 +1,36 @@
+[package]
+name = "cordis-rs-framework"
+description = "Meta-framework of spatiotemporal composability"
+documentation = "https://docs.rs/cordis-rs-framework"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+readme = "../../README.md"
+repository.workspace = true
+keywords = ["plugin", "framework", "dependency-injection", "async"]
+categories = ["asynchronous", "config"]
+
+[lib]
+name = "cordis"
+
+[features]
+default = []
+full = ["group", "hmr", "include", "loader", "logger-console", "timer", "utils"]
+group = ["dep:cordis-group"]
+hmr = ["dep:cordis-hmr", "loader"]
+include = ["dep:cordis-include", "loader"]
+loader = ["dep:cordis-loader"]
+logger-console = ["dep:cordis-logger-console"]
+timer = ["dep:cordis-timer"]
+utils = ["dep:cordis-utils"]
+
+[dependencies]
+cordis-core = { package = "cordis-rs-core", version = "0.1.0", path = "../cordis-core" }
+cordis-group = { package = "cordis-rs-group", version = "0.1.0", path = "../cordis-group", optional = true }
+cordis-hmr = { package = "cordis-rs-hmr", version = "0.1.0", path = "../cordis-hmr", optional = true }
+cordis-include = { package = "cordis-rs-include", version = "0.1.0", path = "../cordis-include", optional = true }
+cordis-loader = { package = "cordis-rs-loader", version = "0.1.0", path = "../cordis-loader", optional = true }
+cordis-logger-console = { package = "cordis-rs-logger-console", version = "0.1.0", path = "../cordis-logger-console", optional = true }
+cordis-timer = { package = "cordis-rs-timer", version = "0.1.0", path = "../cordis-timer", optional = true }
+cordis-utils = { package = "cordis-rs-utils", version = "0.1.0", path = "../cordis-utils", optional = true }

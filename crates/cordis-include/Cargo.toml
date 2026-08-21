@@ -1,0 +1,28 @@
+[package]
+name = "cordis-rs-include"
+description = "JSON and YAML configuration includes for Cordis"
+documentation = "https://docs.rs/cordis-rs-include"
+readme = "../../README.md"
+repository.workspace = true
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[lib]
+name = "cordis_include"
+
+[dependencies]
+cordis-core = { package = "cordis-rs-core", version = "0.1.0", path = "../cordis-core" }
+cordis-loader = { package = "cordis-rs-loader", version = "0.1.0", path = "../cordis-loader" }
+serde.workspace = true
+serde_json.workspace = true
+serde_yaml.workspace = true
+tokio.workspace = true
+yaml-rust2.workspace = true
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.61.2", features = ["Win32_Storage_FileSystem"] }
+
+[dev-dependencies]
+tempfile = "3.22.0"

@@ -1,0 +1,24 @@
+[package]
+name = "cordis-rs-hmr"
+description = "Transactional hot module replacement for Cordis"
+documentation = "https://docs.rs/cordis-rs-hmr"
+readme = "../../README.md"
+repository.workspace = true
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[lib]
+name = "cordis_hmr"
+
+[dependencies]
+cordis-core = { package = "cordis-rs-core", version = "0.1.0", path = "../cordis-core" }
+cordis-loader = { package = "cordis-rs-loader", version = "0.1.0", path = "../cordis-loader" }
+parking_lot.workspace = true
+tokio.workspace = true
+
+[dev-dependencies]
+serde_json.workspace = true
+tempfile = "3.22.0"
+tokio.workspace = true

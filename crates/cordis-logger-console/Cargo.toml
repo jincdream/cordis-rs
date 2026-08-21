@@ -1,0 +1,22 @@
+[package]
+name = "cordis-rs-logger-console"
+description = "Console logger exporter for Cordis"
+documentation = "https://docs.rs/cordis-rs-logger-console"
+readme = "../../README.md"
+repository.workspace = true
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[lib]
+name = "cordis_logger_console"
+
+[dependencies]
+chrono.workspace = true
+cordis-core = { package = "cordis-rs-core", version = "0.1.0", path = "../cordis-core" }
+parking_lot.workspace = true
+serde_json.workspace = true
+
+[dev-dependencies]
+tokio.workspace = true

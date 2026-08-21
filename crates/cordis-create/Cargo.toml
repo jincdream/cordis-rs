@@ -1,0 +1,20 @@
+[package]
+name = "cordis-rs-create"
+description = "Scaffold a Cordis Rust application"
+documentation = "https://docs.rs/cordis-rs-create"
+readme = "../../README.md"
+repository.workspace = true
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[lib]
+name = "cordis_create"
+
+[[bin]]
+name = "create-cordis"
+path = "src/main.rs"
+
+[dev-dependencies]
+tempfile = "3.22.0"
